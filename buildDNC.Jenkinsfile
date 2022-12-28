@@ -1,6 +1,6 @@
 def dockerImage;
 
-node('Agent2'){
+node('DOTNETCORE'){
 	stage('Agent2'){
 		checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/dovdembin/JenkinsDocker']]]);
 	}
